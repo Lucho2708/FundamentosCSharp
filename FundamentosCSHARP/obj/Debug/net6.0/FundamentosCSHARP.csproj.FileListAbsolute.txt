@@ -1,0 +1,15 @@
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\bin\Debug\net6.0\FundamentosCSHARP.exe
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\bin\Debug\net6.0\FundamentosCSHARP.deps.json
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\bin\Debug\net6.0\FundamentosCSHARP.runtimeconfig.json
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\bin\Debug\net6.0\FundamentosCSHARP.dll
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\bin\Debug\net6.0\FundamentosCSHARP.pdb
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.csproj.AssemblyReference.cache
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.AssemblyInfoInputs.cache
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.AssemblyInfo.cs
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.csproj.CoreCompileInputs.cache
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.dll
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\refint\FundamentosCSHARP.dll
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.pdb
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\FundamentosCSHARP.genruntimeconfig.cache
+C:\Users\LSILVA\source\repos\FundamentosCSHARP\FundamentosCSHARP\obj\Debug\net6.0\ref\FundamentosCSHARP.dll
