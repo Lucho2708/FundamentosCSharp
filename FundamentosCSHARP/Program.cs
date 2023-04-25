@@ -6,13 +6,13 @@ namespace FundametosCSHARP
     {
         static void Main(string[] args)
         {
-            var bebidaAlcoholica = new Cerveza(100);
-            MostrarRecomendacion(bebidaAlcoholica);
-        }
+           CervezaBD cervezaBD = new CervezaBD();
+            var cervezas = cervezaBD.Get();
 
-        static void MostrarRecomendacion(IBebidaAlcoholica bebida)
-        {
-            bebida.MaxRecomendado();
+            foreach (var item in cervezas)
+            {
+                Console.WriteLine(item.Nombre);
+            }
         }
     }
 }
