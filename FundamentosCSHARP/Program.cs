@@ -1,32 +1,21 @@
 ﻿using System;
 using FundamentosCSHARP.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 namespace FundametosCSHARP
 {
     class Program
     {
         static void Main(string[] args)
         {
+            //Cerveza cerveza = new Cerveza(10, "Cerveza");
 
-            CervezaBD cervezaBD = new CervezaBD();
-            //Incertamos nueva cerveza
-            //{
-            //    Cerveza cerveza = new Cerveza(15, "Pale ale");
-            //    cerveza.Marca = "Minerva";
-            //    cerveza.Alcohol = 6;
-            //    cervezaBD.Add(cerveza);
-            //}
+            //string miJson = JsonSerializer.Serialize(cerveza);
+            //File.WriteAllText("Objeto.txt", miJson);
 
-            {
-                cervezaBD.Delete(12);
-                
-            }
+            string miJson = File.ReadAllText("Objeto.txt");
+            Cerveza cerveza = JsonSerializer.Deserialize<Cerveza>(miJson);
 
-            var cervezas = cervezaBD.Get();
-
-            foreach (var item in cervezas)
-            {
-                Console.WriteLine(item.Nombre);
-            }
         }
     }
 }
