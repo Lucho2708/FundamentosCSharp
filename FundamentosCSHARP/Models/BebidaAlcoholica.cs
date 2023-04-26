@@ -8,7 +8,7 @@ namespace FundamentosCSHARP.Models
 {
     interface IBebidaAlcoholica
     {
-        public int Alcohol { get; set; }
+        public decimal Alcohol { get; set; }
 
         public void MaxRecomendado();
     }

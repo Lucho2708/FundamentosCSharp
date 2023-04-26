@@ -11,6 +11,8 @@ namespace FundamentosCSHARP.Models
     {
         private string connectionString = "Data Source=TFSCOLAP078;Initial Catalog=FundamentosCSharp;User=sa;Password=S3cur3P@ssw0rd";
 
+                
+        //Obtener todas las cervezas
         public List<Cerveza> Get()
         {
             List<Cerveza> cervezas = new List<Cerveza>();
@@ -31,7 +33,7 @@ namespace FundamentosCSHARP.Models
                     int Cantidad = reader.GetInt32(3);
                     string Nombre = reader.GetString(0);
                     Cerveza cerveza = new Cerveza(Cantidad, Nombre);
-                    cerveza.Alcohol = reader.GetInt32(2);
+                    cerveza.Alcohol = reader.GetDecimal(2);
                     cerveza.Marca = reader.GetString(1);
 
                     cervezas.Add(cerveza);
@@ -41,6 +43,71 @@ namespace FundamentosCSHARP.Models
             }
 
             return cervezas;
+        }
+
+        public void Add(Cerveza cerveza)
+        {
+            string query
+                = "insert into cerveza(nombre, marca, alcohol, cantidad) " +
+                "values(@nombre, @marca, @alcohol, @cantidad)";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", cerveza.Nombre);
+                command.Parameters.AddWithValue("@marca", cerveza.Marca);
+                command.Parameters.AddWithValue("@alcohol", cerveza.Alcohol);
+                command.Parameters.AddWithValue("@cantidad", cerveza.Cantidad);
+                
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+        }
+
+        public void Edit(Cerveza cerveza, int Id)
+        {
+            string query
+                = "update cerveza set nombre=@nombre, " +
+                "marca=@marca, alcohol=@alcohol, cantidad=@cantidad "+
+                " where id=@id";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", cerveza.Nombre);
+                command.Parameters.AddWithValue("@marca", cerveza.Marca);
+                command.Parameters.AddWithValue("@alcohol", cerveza.Alcohol);
+                command.Parameters.AddWithValue("@cantidad", cerveza.Cantidad);
+                command.Parameters.AddWithValue("@id", Id);
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+        }
+
+        public void Delete(int Id)
+        {
+            string query
+                = "delete from cerveza " +
+                " where id=@id";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", Id);
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
         }
     }
 }

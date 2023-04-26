@@ -8,7 +8,7 @@ namespace FundamentosCSHARP.Models
 {
     class Vino : Bebida, IBebidaAlcoholica
     {
-        public int Alcohol { get; set; }
+        public decimal Alcohol { get; set; }
         public void MaxRecomendado()
         {
             Console.WriteLine("El maximo permitido son 3 copas");
