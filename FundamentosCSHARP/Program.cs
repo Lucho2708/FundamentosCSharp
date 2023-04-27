@@ -6,16 +6,19 @@ namespace FundametosCSHARP
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            //Cerveza cerveza = new Cerveza(10, "Cerveza");
+            string url = "https://jsonplaceholder.typicode.com/posts";
+            HttpClient client = new HttpClient();
 
-            //string miJson = JsonSerializer.Serialize(cerveza);
-            //File.WriteAllText("Objeto.txt", miJson);
+            var httpResponse = await client.GetAsync(url);
 
-            string miJson = File.ReadAllText("Objeto.txt");
-            Cerveza cerveza = JsonSerializer.Deserialize<Cerveza>(miJson);
-
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                var content = await httpResponse.Content.ReadAsStringAsync();
+                List<Post> posts =
+                    JsonSerializer.Deserialize<List<Post>>(content);
+            }
         }
     }
 }
