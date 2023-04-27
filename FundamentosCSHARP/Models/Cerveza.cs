@@ -14,11 +14,11 @@ namespace FundamentosCSHARP.Models
         {
             Console.WriteLine("El maximo permitido son 10 botellas");
         }
-        public Cerveza (int Cantidad, string Nombre= "Cerveza")
-            :base(Nombre, Cantidad)
-        {
+        //public Cerveza (int Cantidad, string Nombre= "Cerveza")
+        //    :base(Nombre, Cantidad)
+        //{
 
-        }
+        //}
 
         
     }

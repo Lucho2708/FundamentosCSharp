@@ -32,7 +32,7 @@ namespace FundamentosCSHARP.Models
                 {
                     int Cantidad = reader.GetInt32(3);
                     string Nombre = reader.GetString(0);
-                    Cerveza cerveza = new Cerveza(Cantidad, Nombre);
+                    Cerveza cerveza = new Cerveza();
                     cerveza.Alcohol = reader.GetDecimal(2);
                     cerveza.Marca = reader.GetString(1);
 
